@@ -6,6 +6,7 @@
 body {
   background-color: #fefaf6;
   color: #102c57;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -43,6 +44,18 @@ button {
   color: #fefaf6;
   background-color: #102c57;
 }
+.logo-main {
+  margin: 30px;
+}
+@media screen and (min-width: 961px) {
+  .logo-main {
+    display: none;
+  }
+  .burger {
+    display: none;
+  }
+}
+
 @media (max-width: 961px) {
   .wrapper {
     flex-direction: column;
@@ -51,9 +64,10 @@ button {
     background-color: #eadbc8;
     padding: 50px;
     width: 50%;
-    height: 100vh;
+    height: 90vh;
     position: relative;
-    left: 50%;
+    left: 100%;
+    top: 50vh;
   }
   ul {
     flex-direction: column;
@@ -71,5 +85,40 @@ button {
   button {
     padding: 15px 24px;
     font-size: 18px;
+  }
+  .burger {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left: 60%;
+  }
+  .line-1,
+  .line-2,
+  .line-3 {
+    display: flex;
+    width: 30px;
+    background-color: black;
+    height: 4px;
+  }
+  .main-menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    position: absolute;
+    background-color: #eadbc8;
+  }
+  .active {
+    left: 0%;
+  }
+}
+
+@media (max-width: 520px) {
+  .burger {
+    left: 50vw;
   }
 }
