@@ -47,6 +47,7 @@ button {
 .logo-main {
   margin: 30px;
 }
+
 @media screen and (min-width: 961px) {
   .logo-main {
     display: none;
@@ -57,6 +58,19 @@ button {
 }
 
 @media (max-width: 961px) {
+  .left {
+    transform: rotate(45deg);
+    position: relative;
+    top: 25%;
+  }
+  .opacity {
+    opacity: 0;
+  }
+  .right {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -35%;
+  }
   .wrapper {
     flex-direction: column;
     align-items: center;
@@ -68,6 +82,7 @@ button {
     position: relative;
     left: 100%;
     top: 50vh;
+    transition: 150ms ease-in-out;
   }
   ul {
     flex-direction: column;
@@ -94,6 +109,8 @@ button {
     height: 30px;
     position: relative;
     left: 60%;
+    cursor: pointer;
+    transition: 150s ease-in-out;
   }
   .line-1,
   .line-2,
@@ -102,6 +119,7 @@ button {
     width: 30px;
     background-color: black;
     height: 4px;
+    transition: 150ms ease-in-out;
   }
   .main-menu {
     width: 100%;
