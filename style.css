@@ -133,6 +133,20 @@ button {
   .active {
     left: 0%;
   }
+  .nav-link {
+    opacity: 0;
+  }
+
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
 }
 
 @media (max-width: 520px) {
